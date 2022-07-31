@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: hsl(212, 45%, 89%);
+    position: relative;
+}
+
+.qr-code {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.img .code {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.qr-code h1 {
+    font-size: 22px;
+    margin: 20px 0;
+    color: hsl(218, 44%, 22%);
+    line-height: 1.8rem;
+}
+
+.qr-code p {
+    font-size: 15px;
+    color: hsl(220, 15%, 55%);
+    margin: 20px 0;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: hsl(218, 44%, 22%);
+}
+
+.attribution a {
+    text-decoration: none;
+    color: #0713ff;
+    position: relative;
+}
+
+.attribution a::before {
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    content: '';
+    background: #0713ff;
+    width: 0;
+    height: 2.6px;
+    transition: width 0.4s;
+}
+
+.attribution a:hover::before {
+    width: 100%;
+}
+
+.logo {
+    position: absolute;
+    top: 40px;
+    left: 10%;
+    width: 50px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:900px) {
+    .qr-code {
+        width: 350px;
+    }
+
+    .qr-code h1 {
+        font-size: 26px;
+        line-height: 2.2rem;
+    }
+
+    .qr-code p {
+        font-size: 18px;
+    }
+
+    .attribution {
+        bottom: 10px;
+        left: 0;
+        transform: translateX(0);
+        text-align: center;
+        margin: 0 20px;
+        font-size: 16px;
+    }
+
+    .attribution a {
+        font-size: 20px;
+        line-height: 1.8rem;
+    }
+
+    .logo {
+        top: 10px;
+        left: 10px;
+        width: 30px;
+    }
+}
